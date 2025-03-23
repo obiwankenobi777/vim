@@ -48,6 +48,8 @@ inoremap <c-b> <esc>ba
 inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
 
+inoremap ` ``<Left>
+
 "VISUAL
 vmap \ ~
 
