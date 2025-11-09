@@ -43,7 +43,7 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color wildcharm
+color retrobox
 
 "-----------------------------------------------------------------------------
 "MAPS
@@ -106,8 +106,9 @@ vnoremap \ ~
 
 call plug#begin()
 
-Plug 'tpope/vim-sensible'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
