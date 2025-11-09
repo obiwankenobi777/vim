@@ -22,7 +22,8 @@ set ruler
 set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set laststatus=2
 set autowrite
-set hlsearch incsearch
+set hlsearch 
+set incsearch
 set background=dark
 color retrobox
 
@@ -95,5 +96,4 @@ Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
-"-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
