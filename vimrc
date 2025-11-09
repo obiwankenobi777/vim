@@ -25,9 +25,7 @@ set autowrite
 set hlsearch incsearch
 set background=dark
 color retrobox
-"color wildcharm
-"color murphy
-"color zaibatsu
+
 
 "-----------------------------------------------------------------------------
 "MAPS
@@ -86,6 +84,7 @@ inoremap <c-d> <esc>ddi
 "VISUAL
 vmap \ ~
 
+
 "-----------------------------------------------------------------------------
 "Plugins
 "-----------------------------------------------------------------------------
@@ -97,43 +96,4 @@ Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 "-----------------------------------------------------------------------------
-
 "-----------------------------------------------------------------------------
-"Autopairs
-"-----------------------------------------------------------------------------
-"Função para inserir pares automáticos
-""function! AutoPairs(char)
-""    let pairs = {
-""        \ '(': ')',
-""        \ '[': ']',
-""        \ '{': '}',
-""        \ '"': '"',
-""        \ "'": "'",
-""        \ }
-""
-""    if has_key(pairs, a:char)
-""        return a:char . pairs[a:char] . "\<Left>"
-""    endif
-""    return a:char
-""endfunction
-""
-""" Função para pular caracteres de fechamento existentes
-""function! SkipClosing(char)
-""    let next_char = getline('.')[col('.')-1]
-""    if next_char == a:char
-""        return "\<Right>"
-""    endif
-""    return a:char
-""endfunction
-""
-""" Mapeamentos para modo insert
-""inoremap <expr> ( AutoPairs('(')
-""inoremap <expr> [ AutoPairs('[')
-""inoremap <expr> { AutoPairs('{')
-""inoremap <expr> " AutoPairs('"')
-""inoremap <expr> ' AutoPairs("'")
-""inoremap <expr> ) SkipClosing(')')
-""inoremap <expr> ] SkipClosing(']')
-""inoremap <expr> } SkipClosing('}')
-"""-----------------------------------------------------------------------------
-""
