@@ -4,28 +4,54 @@
 
 set shortmess+=I
 syntax on
+
+"identation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
-set number numberwidth=7
-set relativenumber
-set mouse=n
+
+"search and research
 set incsearch
+set hlsearch 
+set incsearch
+set smartcase
+
+"automatica writing
+set autowrite
+set autoread
+
+"codification
 set encoding=utf-8
 set textwidth=79
-set cursorline
+
+"mouse
+set mouse=n
+
+"status bar
 set showtabline=0
 set ruler
 set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set laststatus=2
 set autowrite
-set hlsearch 
-set incsearch
+
+"interface
+set number numberwidth=7
+set relativenumber
+set cursorline
 set background=dark
+set termguicolors
 color retrobox
+
+
+"-----------------------------------------------------------------------------
+"AUTOCOMMANDS
+"-----------------------------------------------------------------------------
+
+autocmd InsertLeave,TextChanged * silent! wall
+autocmd FocusGained,BufEnter * checktime
 
 
 "-----------------------------------------------------------------------------
@@ -34,13 +60,14 @@ color retrobox
 
 let mapleader="-"
 
-"NORMAL
+"NORMAL MODE
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <space> viw
 
 "file explorer
+let g:netrw_liststyle=3
 nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
 
 "windows
@@ -49,7 +76,6 @@ nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-x> <c-w><c-x>
-
 nnoremap vr :vertical resize<space>
 
 "buffers
@@ -72,7 +98,7 @@ nnoremap gh 0
 nnoremap <leader>c "ayy
 nnoremap <leader>v "ap
 
-"INSERTION
+"INSERTION MODE
 inoremap jk <esc>
 inoremap <c-u> <esc>gUiwea
 inoremap <c-l> <esc>la
@@ -80,15 +106,13 @@ inoremap <c-b> <esc>ba
 inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
 
-"inoremap ` ``<Left>
-
 "VISUAL
-vmap \ ~
-
+vnoremap \ ~
 
 "-----------------------------------------------------------------------------
-"Plugins
+"PLUGINS
 "-----------------------------------------------------------------------------
+
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
@@ -96,4 +120,5 @@ Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
+"-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
