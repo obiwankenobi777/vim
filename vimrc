@@ -43,16 +43,7 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
-
-
-"-----------------------------------------------------------------------------
-"AUTOCOMMANDS
-"-----------------------------------------------------------------------------
-
-autocmd InsertLeave,TextChanged * silent! wall
-autocmd FocusGained,BufEnter * checktime
-
+color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPS
