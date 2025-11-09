@@ -22,8 +22,12 @@ set ruler
 set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set laststatus=2
 set autowrite
+set hlsearch incsearch
 set background=dark
-color wildcharm
+color retrobox
+"color wildcharm
+"color murphy
+"color zaibatsu
 
 
 "-----------------------------------------------------------------------------
@@ -38,12 +42,17 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <space> viw
 
+"file explorer
+nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
+
 "windows
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
 nnoremap <c-l> <c-w><c-l>
 nnoremap <c-x> <c-w><c-x>
+
+nnoremap vr :vertical resize<space>
 
 "buffers
 nnoremap bn :bnext<cr>
@@ -73,20 +82,28 @@ inoremap <c-b> <esc>ba
 inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
 
-inoremap ` ``<Left>
+"inoremap ` ``<Left>
 
 "VISUAL
 vmap \ ~
 
-"FILE EXPLORER
+"-----------------------------------------------------------------------------
+"Plugin
+"-----------------------------------------------------------------------------
+call plug#begin()
 
-nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
+" List your plugins here
+Plug 'tpope/vim-sensible'
+Plug 'jiangmiao/auto-pairs'
 
+call plug#end()
+
+"-----------------------------------------------------------------------------
 
 "-----------------------------------------------------------------------------
 "Autopairs
 "-----------------------------------------------------------------------------
-" Função para inserir pares automáticos
+"Função para inserir pares automáticos
 ""function! AutoPairs(char)
 ""    let pairs = {
 ""        \ '(': ')',
