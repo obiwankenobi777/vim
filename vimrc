@@ -13,13 +13,13 @@ set expandtab
 set autoindent
 set smartindent
 
-"search and research
+"search
 set incsearch
 set hlsearch 
 set incsearch
 set smartcase
 
-"automatica writing
+"automatic writing
 set autowrite
 set autoread
 
@@ -43,7 +43,7 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
+color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPS
@@ -61,7 +61,7 @@ nnoremap <space> viw
 let g:netrw_liststyle=3
 nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
 
-"windows
+"window
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
@@ -101,7 +101,7 @@ inoremap <c-d> <esc>ddi
 vnoremap \ ~
 
 "-----------------------------------------------------------------------------
-"PLUGINS
+"PLUGs
 "-----------------------------------------------------------------------------
 
 call plug#begin()
@@ -114,3 +114,4 @@ call plug#end()
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
+
