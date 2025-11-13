@@ -59,11 +59,12 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <space> viw
 nnoremap <leader>t :AirlineTheme
+nnoremap <leader>b :NERDTreeToggle<cr>
 
 "file explorer
 "nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
 let g:netrw_liststyle=3
-nnoremap <f2> :NERDTreeToggle<CR>
+" nnoremap <f2> :NERDTreeToggle<CR>
 
 "window
 nnoremap <c-h> <c-w><c-h>
@@ -131,7 +132,6 @@ call plug#end()
 "-----------------------------------------------------------------------------
 "AIRLINE
 "-----------------------------------------------------------------------------
-
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
