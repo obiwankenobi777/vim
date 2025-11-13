@@ -15,7 +15,6 @@ set smartindent
 
 "search
 set incsearch
-set hlsearch 
 set incsearch
 set smartcase
 
@@ -31,11 +30,10 @@ set textwidth=79
 set mouse=n
 
 "status bar
+"set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set showtabline=0
 set ruler
-"set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set laststatus=2
-set autowrite
 
 "interface
 set number numberwidth=7
@@ -46,7 +44,7 @@ set termguicolors
 color wildcharm
 
 "-----------------------------------------------------------------------------
-"MAPS
+"MAPs
 "-----------------------------------------------------------------------------
 
 let mapleader="-"
@@ -57,13 +55,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
-nnoremap <space> viw
-nnoremap <leader>t :AirlineTheme
+nnoremap <leader>t :AirlineTheme<space>
 nnoremap <leader>b :NERDTreeToggle<cr>
+nnoremap <space> viw
 
 "file explorer
 "nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
-let g:netrw_liststyle=3
+"let g:netrw_liststyle=3
 " nnoremap <f2> :NERDTreeToggle<CR>
 
 "window
@@ -85,7 +83,7 @@ nnoremap dge dG
 nnoremap dgl d$
 nnoremap dgh a<space><esc>d0
 
-"move go
+"move
 nnoremap ge G
 nnoremap gl $
 nnoremap gh 0
@@ -111,7 +109,7 @@ vnoremap \ ~
 
 call plug#begin()
 
-"based
+"basic
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
@@ -124,9 +122,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"syntax for languages
-Plug 'sheerun/vim-polyglot'
-
 call plug#end()
 
 "-----------------------------------------------------------------------------
@@ -138,7 +133,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_theme='simple'
+let g:airline_theme='atomic'
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
