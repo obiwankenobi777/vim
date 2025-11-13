@@ -24,7 +24,7 @@ set autowrite
 set autoread
 
 "codification
-set encoding=utf-8
+set encoding=UTF-8
 set textwidth=79
 
 "mouse
@@ -33,12 +33,12 @@ set mouse=n
 "status bar
 set showtabline=0
 set ruler
-set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
+"set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set laststatus=2
 set autowrite
 
 "interface
-set number numberwidth=7
+set number numberwidth=6
 set relativenumber
 set cursorline
 set background=dark
@@ -59,7 +59,10 @@ nnoremap <space> viw
 
 "file explorer
 let g:netrw_liststyle=3
-nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
+"nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
+nnoremap <f2> :NERDTreeToggle<CR>
+"nnoremap <leader>n :NERDTreeToggle<CR>
+
 
 "window
 nnoremap <c-h> <c-w><c-h>
@@ -106,12 +109,22 @@ vnoremap \ ~
 
 call plug#begin()
 
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
 "-----------------------------------------------------------------------------
+"AIRLINE
 "-----------------------------------------------------------------------------
 
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"-----------------------------------------------------------------------------
+"-----------------------------------------------------------------------------
