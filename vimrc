@@ -24,7 +24,7 @@ set autoread
 
 "codification
 set encoding=UTF-8
-set textwidth=79
+set textwidth=80
 
 "mouse
 set mouse=n
@@ -41,12 +41,14 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color wildcharm
+color retrobox
+"color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPs
 "-----------------------------------------------------------------------------
 
+"leader
 let mapleader="-"
 
 "NORMAL MODE
@@ -58,11 +60,6 @@ nnoremap <leader>q :q<cr>
 nnoremap <leader>t :AirlineTheme<space>
 nnoremap <leader>b :NERDTreeToggle<cr>
 nnoremap <space> viw
-
-"file explorer
-"nnoremap <f2> :Vex<cr>:vertical resize -40<cr>
-"let g:netrw_liststyle=3
-" nnoremap <f2> :NERDTreeToggle<CR>
 
 "window
 nnoremap <c-h> <c-w><c-h>
@@ -77,11 +74,6 @@ nnoremap bn :bnext<cr>
 nnoremap bp :bprevious<cr>
 nnoremap bd :bdelete<cr>
 nnoremap bls :ls<cr>
-
-"delete
-nnoremap dge dG
-nnoremap dgl d$
-nnoremap dgh a<space><esc>d0
 
 "move
 nnoremap ge G
@@ -117,7 +109,6 @@ Plug 'jiangmiao/auto-pairs'
 "file explorer
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-
 "statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -133,7 +124,32 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_theme='atomic'
+let g:airline_theme = 'zenburn'
+
+let g:theme_map = { "retrobox": "serene", "wildcharm": "zenburn" }
+
+
+"-----------------------------------------------------------------------------
+"Functions
+"-----------------------------------------------------------------------------
+
+function! MyColorScheme() abort
+    let cs = get(g:, 'colors_name', '')
+
+    if cs ==# "retrobox"
+        let g:airline_theme='zenburn'
+        AirlineRefresh
+    elseif cs ==# "wildcharm"
+        let g:airline_theme='serene'
+        AirlineRefresh
+    endif
+endfunction 
+
+augroup MyColorScheme
+    autocmd!
+    autocmd ColorScheme * call MyColorScheme()
+augroup END
+
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
