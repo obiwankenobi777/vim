@@ -42,7 +42,6 @@ set cursorline
 set background=dark
 set termguicolors
 color retrobox
-"color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPs
@@ -126,8 +125,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'zenburn'
 
-let g:theme_map = { "retrobox": "serene", "wildcharm": "zenburn" }
-
 
 "-----------------------------------------------------------------------------
 "Functions
@@ -135,7 +132,6 @@ let g:theme_map = { "retrobox": "serene", "wildcharm": "zenburn" }
 
 function! MyColorScheme() abort
     let cs = get(g:, 'colors_name', '')
-
     if cs ==# "retrobox"
         let g:airline_theme='zenburn'
         AirlineRefresh
