@@ -15,7 +15,6 @@ set smartindent
 
 "search
 set incsearch
-set incsearch
 set smartcase
 
 "automatic writing
@@ -41,7 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
+" color retrobox
+ color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPs
@@ -56,6 +56,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
+nnoremap <leader>d dd
 nnoremap <leader>t :AirlineTheme<space>
 nnoremap <leader>b :NERDTreeToggle<cr>
 nnoremap <space> viw
@@ -124,6 +125,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme = 'zenburn'
+" let g:airline_theme = 'serene'
 
 
 "-----------------------------------------------------------------------------
