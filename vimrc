@@ -57,8 +57,8 @@ nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>d dd
-nnoremap <leader>t :AirlineTheme<space>
-nnoremap <leader>b :NERDTreeToggle<cr>
+" nnoremap <leader>r :AirlineTheme<space>
+nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <space> viw
 
 "window
@@ -70,10 +70,10 @@ nnoremap <c-x> <c-w><c-x>
 nnoremap vr :vertical resize<space>
 
 "buffers
-nnoremap bn :bnext<cr>
-nnoremap bp :bprevious<cr>
-nnoremap bd :bdelete<cr>
-nnoremap bls :ls<cr>
+nnoremap nn :bnext<cr>
+nnoremap np :bprevious<cr>
+nnoremap nd :bdelete<cr>
+nnoremap nls :ls<cr>
 
 "move
 nnoremap ge G
