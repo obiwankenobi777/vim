@@ -40,25 +40,21 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color retrobox
- color wildcharm
+color retrobox
 
 "-----------------------------------------------------------------------------
 "MAPs
 "-----------------------------------------------------------------------------
 
-"leader
-let mapleader="-"
-
 "NORMAL MODE
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader><space> viw<esc>a"<esc>hbi"<esc>lel
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>d dd
-" nnoremap <leader>r :AirlineTheme<space>
-nnoremap <leader>t :NERDTreeToggle<cr>
+nnoremap -ev :vsplit $MYVIMRC<cr>
+nnoremap -sv :source $MYVIMRC<cr>
+nnoremap -<space> viw<esc>a"<esc>hbi"<esc>lel
+nnoremap -w :w<cr>
+nnoremap -q :q<cr>
+nnoremap -d dd
+nnoremap -r :AirlineTheme<space>
+nnoremap -t :NERDTreeToggle<cr>
 nnoremap <space> viw
 
 "window
@@ -75,14 +71,10 @@ nnoremap np :bprevious<cr>
 nnoremap nd :bdelete<cr>
 nnoremap nls :ls<cr>
 
-"move
+" move
 nnoremap ge G
 nnoremap gl $
 nnoremap gh 0
-
-"copy and paste
-nnoremap <leader>c "ayy
-nnoremap <leader>v "ap
 
 "INSERTION MODE
 inoremap jk <esc>
@@ -92,8 +84,6 @@ inoremap <c-b> <esc>ba
 inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
 
-"VISUAL
-vnoremap \ ~
 
 "-----------------------------------------------------------------------------
 "PLUGs
@@ -109,6 +99,7 @@ Plug 'jiangmiao/auto-pairs'
 "file explorer
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+
 "statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -124,8 +115,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_theme = 'zenburn'
 " let g:airline_theme = 'serene'
+let g:airline_theme = 'zenburn'
 
 
 "-----------------------------------------------------------------------------
