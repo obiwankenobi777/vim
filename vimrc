@@ -29,7 +29,7 @@ set textwidth=80
 set mouse=n
 
 "status bar
-"set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
+set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set showtabline=0
 set ruler
 set laststatus=2
@@ -49,13 +49,12 @@ color retrobox
 "NORMAL MODE
 nnoremap -ev :vsplit $MYVIMRC<cr>
 nnoremap -sv :source $MYVIMRC<cr>
+nnoremap - viw
 nnoremap -<space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap -w :w<cr>
 nnoremap -q :q<cr>
 nnoremap -d dd
-nnoremap -r :AirlineTheme<space>
 nnoremap -t :NERDTreeToggle<cr>
-nnoremap <space> viw
 
 "window
 nnoremap <c-h> <c-w><c-h>
@@ -100,45 +99,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
-"statusline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 call plug#end()
-
-"-----------------------------------------------------------------------------
-"AIRLINE
-"-----------------------------------------------------------------------------
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" let g:airline_theme = 'serene'
-let g:airline_theme = 'zenburn'
-
-
-"-----------------------------------------------------------------------------
-"Functions
-"-----------------------------------------------------------------------------
-
-function! MyColorScheme() abort
-    let cs = get(g:, 'colors_name', '')
-    if cs ==# "retrobox"
-        let g:airline_theme='zenburn'
-        AirlineRefresh
-    elseif cs ==# "wildcharm"
-        let g:airline_theme='serene'
-        AirlineRefresh
-    endif
-endfunction 
-
-augroup MyColorScheme
-    autocmd!
-    autocmd ColorScheme * call MyColorScheme()
-augroup END
-
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
