@@ -40,6 +40,7 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
+" color wildcharm
 color retrobox
 
 "-----------------------------------------------------------------------------
@@ -53,6 +54,7 @@ nnoremap - viw
 nnoremap -<space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap -w :w<cr>
 nnoremap -q :q<cr>
+nnoremap -x :x<cr>
 nnoremap -d dd
 nnoremap -t :NERDTreeToggle<cr>
 
@@ -65,10 +67,10 @@ nnoremap <c-x> <c-w><c-x>
 nnoremap vr :vertical resize<space>
 
 "buffers
-nnoremap nn :bnext<cr>
-nnoremap np :bprevious<cr>
-nnoremap nd :bdelete<cr>
-nnoremap nls :ls<cr>
+nnoremap wn :bnext<cr>
+nnoremap wp :bprevious<cr>
+nnoremap wd :bdelete<cr>
+nnoremap wls :ls<cr>
 
 " move
 nnoremap ge G
