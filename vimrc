@@ -67,10 +67,10 @@ nnoremap <c-x> <c-w><c-x>
 nnoremap vr :vertical resize<space>
 
 "buffers
-nnoremap wn :bnext<cr>
-nnoremap wp :bprevious<cr>
-nnoremap wd :bdelete<cr>
-nnoremap wls :ls<cr>
+" nnoremap wn :bnext<cr>
+" nnoremap wp :bprevious<cr>
+" nnoremap wd :bdelete<cr>
+" nnoremap wls :ls<cr>
 
 " move
 nnoremap ge G
