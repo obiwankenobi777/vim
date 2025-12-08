@@ -35,12 +35,11 @@ set ruler
 set laststatus=2
 
 "interface
-set number numberwidth=7
+set number numberwidth=6
 set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color wildcharm
 color retrobox
 
 "-----------------------------------------------------------------------------
@@ -66,12 +65,6 @@ nnoremap <c-l> <c-w><c-l>
 nnoremap <c-x> <c-w><c-x>
 nnoremap vr :vertical resize<space>
 
-"buffers
-" nnoremap wn :bnext<cr>
-" nnoremap wp :bprevious<cr>
-" nnoremap wd :bdelete<cr>
-" nnoremap wls :ls<cr>
-
 " move
 nnoremap ge G
 nnoremap gl $
@@ -84,7 +77,6 @@ inoremap <c-l> <esc>la
 inoremap <c-b> <esc>ba
 inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
-
 
 "-----------------------------------------------------------------------------
 "PLUGs
