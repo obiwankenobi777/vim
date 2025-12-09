@@ -41,6 +41,7 @@ set cursorline
 set background=dark
 set termguicolors
 color retrobox
+" color wildcharm
 
 "-----------------------------------------------------------------------------
 "MAPs
@@ -69,6 +70,7 @@ nnoremap vr :vertical resize<space>
 nnoremap ge G
 nnoremap gl $
 nnoremap gh 0
+nnoremap gn :bnext<cr>
 
 "INSERTION MODE
 inoremap jk <esc>
