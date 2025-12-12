@@ -1,11 +1,11 @@
 "-----------------------------------------------------------------------------
-"GLOBAL SETs
+" GLOBAL SETs
 "-----------------------------------------------------------------------------
 
 set shortmess+=I
 syntax on
 
-"identation
+" identation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -13,28 +13,28 @@ set expandtab
 set autoindent
 set smartindent
 
-"search
+" search
 set incsearch
 set smartcase
 
-"automatic writing
+" automatic writing
 set autowrite
 set autoread
 
-"codification
+" codification
 set encoding=UTF-8
 set textwidth=80
 
-"mouse
+" mouse
 set mouse=n
 
-"status bar
+" status bar
 set rulerformat=%15(%p%%\ %l/%L\ %c%V%)
 set showtabline=0
 set ruler
 set laststatus=2
 
-"interface
+" interface
 set number numberwidth=6
 set relativenumber
 set cursorline
@@ -44,10 +44,10 @@ color retrobox
 " color wildcharm
 
 "-----------------------------------------------------------------------------
-"MAPs
+" MAPs
 "-----------------------------------------------------------------------------
 
-"NORMAL MODE
+" NORMAL MODE
 nnoremap -ev :vsplit $MYVIMRC<cr>
 nnoremap -sv :source $MYVIMRC<cr>
 nnoremap - viw
@@ -58,7 +58,7 @@ nnoremap -x :x<cr>
 nnoremap -d dd
 nnoremap -t :NERDTreeToggle<cr>
 
-"window
+" window
 nnoremap <c-h> <c-w><c-h>
 nnoremap <c-j> <c-w><c-j>
 nnoremap <c-k> <c-w><c-k>
@@ -72,7 +72,7 @@ nnoremap gl $
 nnoremap gh 0
 nnoremap gn :bnext<cr>
 
-"INSERTION MODE
+" INSERTION MODE
 inoremap jk <esc>
 inoremap <c-u> <esc>gUiwea
 inoremap <c-l> <esc>la
@@ -81,17 +81,17 @@ inoremap <c-o> <esc>O
 inoremap <c-d> <esc>ddi
 
 "-----------------------------------------------------------------------------
-"PLUGs
+" PLUGs
 "-----------------------------------------------------------------------------
 
 call plug#begin()
 
-"basic
+" basic
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 
-"file explorer
+" file explorer
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
