@@ -40,8 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
-" color wildcharm
+" color retrobox
+color wildcharm
 
 "-----------------------------------------------------------------------------
 " MAPs
@@ -50,7 +50,6 @@ color retrobox
 " NORMAL MODE
 nnoremap -ev :vsplit $MYVIMRC<cr>
 nnoremap -sv :source $MYVIMRC<cr>
-nnoremap - viw
 nnoremap -<space> viw<esc>a"<esc>hbi"<esc>lel
 nnoremap -w :w<cr>
 nnoremap -q :q<cr>
