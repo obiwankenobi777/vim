@@ -40,8 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color retrobox
-color wildcharm
+color retrobox
+" color wildcharm
 
 "-----------------------------------------------------------------------------
 " MAPs
