@@ -40,8 +40,9 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
-" color wildcharm
+" color retrobox
+color quiet
+
 
 "-----------------------------------------------------------------------------
 " MAPs
@@ -95,6 +96,20 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+"-----------------------------------------------------------------------------
+"Functions
+"-----------------------------------------------------------------------------
+
+function! Foo()
+    :!clear && node foo.js
+endfunction
+nnoremap foo :call Foo()<cr>
+
+function! Bar()
+    :!clear&& node bar.js
+endfunction
+nnoremap bar :call Bar()<cr>
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
