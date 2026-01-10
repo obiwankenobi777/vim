@@ -98,15 +98,16 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+
 "-----------------------------------------------------------------------------
-"Functions
+" Functions
 "-----------------------------------------------------------------------------
 
-function! Engineer()
+function! Running()
     " :!clear && lua foo.lua
     :!clear && node foo.js
 endfunction
-" nnoremap foo :call Engineer()<cr>
+nnoremap foo :call Running()<cr>
 " nnoremap foo :source foo.vim<cr>
 
 "-----------------------------------------------------------------------------
