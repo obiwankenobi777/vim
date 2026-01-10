@@ -40,8 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color retrobox
-color quiet
+color retrobox
+" color wildcharm
 
 
 "-----------------------------------------------------------------------------
@@ -57,6 +57,7 @@ nnoremap -q :q<cr>
 nnoremap -x :x<cr>
 nnoremap -d dd
 nnoremap -t :NERDTreeToggle<cr>
+nnoremap cul :set nocul<cr>
 
 " window
 nnoremap <c-h> <c-w><c-h>
@@ -101,15 +102,12 @@ call plug#end()
 "Functions
 "-----------------------------------------------------------------------------
 
-function! Foo()
+function! Engineer()
+    " :!clear && lua foo.lua
     :!clear && node foo.js
 endfunction
-nnoremap foo :call Foo()<cr>
-
-function! Bar()
-    :!clear&& node bar.js
-endfunction
-nnoremap bar :call Bar()<cr>
+" nnoremap foo :call Engineer()<cr>
+" nnoremap foo :source foo.vim<cr>
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
