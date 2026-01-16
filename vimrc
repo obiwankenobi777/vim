@@ -40,8 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
-" color wildcharm
+" color retrobox
+color wildcharm
 
 
 "-----------------------------------------------------------------------------
@@ -104,11 +104,11 @@ call plug#end()
 "-----------------------------------------------------------------------------
 
 function! Running()
+    :!clear &&  mk foo && ./foo
     " :!clear && lua foo.lua
-    :!clear && node foo.js
+    " :!clear && node foo.js
 endfunction
 nnoremap foo :call Running()<cr>
-" nnoremap foo :source foo.vim<cr>
 
 "-----------------------------------------------------------------------------
 "-----------------------------------------------------------------------------
