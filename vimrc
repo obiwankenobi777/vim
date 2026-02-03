@@ -40,8 +40,9 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color retrobox
-color wildcharm
+color retrobox
+" color wildcharm
+" color quiet
 
 
 "-----------------------------------------------------------------------------
@@ -67,11 +68,13 @@ nnoremap <c-l> <c-w><c-l>
 nnoremap <c-x> <c-w><c-x>
 nnoremap vr :vertical resize<space>
 
-" move
-nnoremap ge G
-nnoremap gl $
-nnoremap gh 0
+" move buffer
 nnoremap gn :bnext<cr>
+
+" move text
+" nnoremap ge G
+" nnoremap gl $
+" nnoremap gh 0
 
 " INSERTION MODE
 inoremap jk <esc>
@@ -104,9 +107,9 @@ call plug#end()
 "-----------------------------------------------------------------------------
 
 function! Running()
-    :!clear &&  mk foo && ./foo
-    " :!clear && lua foo.lua
-    " :!clear && node foo.js
+    " :!clear &&  mk foo && ./foo
+    " :!clear && python foo.py
+    :!clear && lua foo.lua
 endfunction
 nnoremap foo :call Running()<cr>
 
