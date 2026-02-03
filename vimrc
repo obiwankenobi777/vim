@@ -40,8 +40,8 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-color retrobox
-" color wildcharm
+" color retrobox
+color wildcharm
 " color quiet
 
 
@@ -71,11 +71,6 @@ nnoremap vr :vertical resize<space>
 " move buffer
 nnoremap gn :bnext<cr>
 
-" move text
-" nnoremap ge G
-" nnoremap gl $
-" nnoremap gh 0
-
 " INSERTION MODE
 inoremap jk <esc>
 inoremap <c-u> <esc>gUiwea
@@ -100,7 +95,6 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-
 
 "-----------------------------------------------------------------------------
 " Functions
