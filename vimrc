@@ -40,9 +40,10 @@ set relativenumber
 set cursorline
 set background=dark
 set termguicolors
-" color retrobox
-color wildcharm
+color catppuccin
+" color wildcharm
 " color quiet
+" color retrobox
 
 
 "-----------------------------------------------------------------------------
@@ -101,9 +102,9 @@ call plug#end()
 "-----------------------------------------------------------------------------
 
 function! Running()
-    " :!clear &&  mk foo && ./foo
+    :!clear &&  mk foo && ./foo
     " :!clear && python foo.py
-    :!clear && lua foo.lua
+    " :!clear && lua foo.lua
 endfunction
 nnoremap foo :call Running()<cr>
 
