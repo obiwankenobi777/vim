@@ -35,15 +35,15 @@ set ruler
 set laststatus=2
 
 " interface
-set number numberwidth=6
+set number numberwidth=7
 set relativenumber
-set cursorline
+" set cursorline
 set background=dark
 set termguicolors
-color catppuccin
-" color wildcharm
-" color quiet
+" color catppuccin
 " color retrobox
+color wildcharm
+" color quiet
 
 
 "-----------------------------------------------------------------------------
@@ -73,7 +73,7 @@ nnoremap vr :vertical resize<space>
 nnoremap gn :bnext<cr>
 
 " INSERTION MODE
-inoremap jk <esc>
+inoremap jk <esc>:w<cr>
 inoremap <c-u> <esc>gUiwea
 inoremap <c-l> <esc>la
 inoremap <c-b> <esc>ba
@@ -102,7 +102,8 @@ call plug#end()
 "-----------------------------------------------------------------------------
 
 function! Running()
-    :!clear &&  mk foo && ./foo
+    :!clear && mkas foo
+    " :!clear &&  mk foo && ./foo
     " :!clear && python foo.py
     " :!clear && lua foo.lua
 endfunction
