@@ -37,12 +37,12 @@ set laststatus=2
 " interface
 set number numberwidth=7
 set relativenumber
-" set cursorline
 set background=dark
 set termguicolors
-" color catppuccin
+set cursorline
+color catppuccin
+" color wildcharm
 " color retrobox
-color wildcharm
 " color quiet
 
 
@@ -102,8 +102,9 @@ call plug#end()
 "-----------------------------------------------------------------------------
 
 function! Running()
-    :!clear && mkas foo
-    " :!clear &&  mk foo && ./foo
+    :!clear &&  mk foo && ./foo
+    " :!clear && go run foo.go
+    " :!clear && mkas foo
     " :!clear && python foo.py
     " :!clear && lua foo.lua
 endfunction
